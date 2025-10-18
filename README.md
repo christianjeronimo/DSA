@@ -1,2 +1,2 @@
 # DSA
-Pythin implementations of classic algorithms and data structures
+Python implementations of classic algorithms and data structures
