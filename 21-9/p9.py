@@ -4,7 +4,6 @@
 # Extra credit: Graph Algorithm
 # p9.py:(working/tested)
 
-# not as much comment on this assignment running late
 
 import sys
 import math
