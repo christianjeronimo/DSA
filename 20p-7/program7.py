@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# Christian Jeronimo, cjeronim@pengo
-# chrstnjeronimo@gmail.com
 # program7.py
 # Solitaire Encryption (Assignment #7: tested/working)
 
