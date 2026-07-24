@@ -56,7 +56,7 @@ void MinimumHeap::swap(int i, int j) {
   std::swap(heap[i], heap[j]);
 }
 
-void MinimumHeap::Build_heap() {
+void MinimumHeap::build_heap() {
   for (int i = size / 2 - 1; i >= 0; --i) {
     heapify(i);
   }
@@ -126,7 +126,7 @@ std::pair<int*, int> MinimumHeap::heap_sort() {
 
 std::string MinimumHeap::to_string() {
   std::stringstream content;
-  content << "heap size" << size << ": ";
+  content << "heap size " << size << ": ";
 
   for (int  i = 0; i < size; i++) {
     content << heap[i];
