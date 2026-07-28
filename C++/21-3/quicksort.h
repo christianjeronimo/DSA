@@ -1,7 +1,6 @@
 /*
  * @filename quicksort.h
  * Part of assignment 3
- * quicksort class object
  * https://www.geeksforgeeks.org/cpp/namespace-in-c/
  */
 

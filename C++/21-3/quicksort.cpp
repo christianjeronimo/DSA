@@ -1,7 +1,6 @@
 /*
  * @filename quicksort.cpp
  * Part of assignment 3
- * quicksort class object
  */
 
 #include "quicksort.h"
