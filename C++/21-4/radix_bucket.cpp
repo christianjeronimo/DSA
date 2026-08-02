@@ -9,14 +9,29 @@
 #include <vector>
 
 namespace {
-  constexpr int buckets = 9;
+  constexpr int digits = 9;
 
-  int digit_value(number, index) {
+  void rbsort(std::vector<int> &arr) {
+    int divisor = 1;
+    
+    for (int index = 0; index < digits; index++) {
+      std::vector<std::vector<int>> buckets(10);
 
-  }
+      for (int number : arr) {
+	int value = (number / divisor) % 10;
+	buckets[value].push_back(number);
+      }
 
-  std::vector<int> rbsort(std::vector<int> &arr) {
+      int i = 0;
+      for (const auto &bucket : buckets) {
+	for (int num : bucket) {
+	  arr[i] = num;
+	  i++;
+	}
+      }
 
+      divisor *= 10;       
+    }
   }
 }
 
