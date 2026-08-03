@@ -22,7 +22,7 @@ private:
   const double c = 0.618034;
   std::list<std::unique_ptr<Record>>* table;
   int hash(int key);
-  std::pair<int i, int j> find(int key);
+  std::pair<int, int> find(int key);
 public:
   HashTable(int cap = 100);
   ~HashTable();
