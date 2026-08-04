@@ -9,7 +9,6 @@
 #include <list>
 #include <memory>
 #include <utility>
-#include <cmath>
 #include <iostream>
 #include <iterator>
 
@@ -23,7 +22,8 @@ HashTable::~HashTable() {
 }
 
 int HashTable::hash(int key) {
-  return 0;
+  double part = (key * c) - static_cast<int>(key * c);
+  return static_cast<int>(capacity * part);
 }
 
 std::pair<int, int> HashTable::find(int key) {
