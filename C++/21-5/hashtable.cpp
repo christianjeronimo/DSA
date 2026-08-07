@@ -31,7 +31,8 @@ std::pair<int, int> HashTable::find(int key) {
 }
 
 void HashTable::insert(int key, std::string value) {
-
+  int index = hash(key);
+  table[index].push_back(std::make_unique<Record>(key, value));
 }
 
 void HashTable::search(int key) {
