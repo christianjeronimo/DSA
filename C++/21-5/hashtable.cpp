@@ -10,6 +10,8 @@
 #include <memory>
 #include <iostream>
 #include <iterator>
+#include <fstream>
+#include <iomanip>
 
 HashTable::HashTable(int cap) {
   capacity = cap;
@@ -63,5 +65,21 @@ void HashTable::clear() {
   for (int i = 0; i < capacity; i++) {
     auto &curr_list = table[i];
     curr_list.clear();
+  }
+}
+
+void HashTable::save(std::string filename) {
+  std::ofstream file(filename);
+
+  if (!file.is_open()) {
+    std::cout << "Error saving file.\n";
+    return;
+  }
+
+  for (int i = 0; i < capacity; i++) {
+    for (auto it = table[i].begin(); it != table[i].end(); ++it) {
+      file << std::setfill('0') << std::setw(9) << (*it)->key << " "
+	   << (*it)->value << "\n";
+    }
   }
 }

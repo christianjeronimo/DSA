@@ -28,4 +28,5 @@ public:
   void search(int key);
   void remove(int key);
   void clear();
+  void save(std::string filename);
 };
