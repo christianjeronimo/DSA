@@ -1,5 +1,5 @@
 /*
- * @filename union_find.h
+ * @filename union_find.cpp
  * part of Assignment #6: Amazing Union-Find
  * Maze generation with Disjoint Sets
  */
@@ -35,13 +35,34 @@ void DisjointSet::link(int x, int y) {
 }
 
 int DisjointSet::find(int x) {
-  return 0;
+  if (x < 0 || x >= size) {
+    return -1;
+  }
+
+  if (x != parent[x]) {
+    parent[x] = find(parent[x]);
+  }
+  
+  return parent[x];
 }
 
 int DisjointSet::num_sets() {
-  return 0;
+  return sets;
 }
 
 bool DisjointSet::union_(int x, int y) {
+  if (x < 0 || x >= size || y < 0 || y >= size) {
+    return false;
+  }
+
+  int root_x = find(x);
+  int root_y = find(y);
+
+  if (root_x == root_y) {
+    return false;
+  }
+
+  link(root_x, root_y);
+  sets--;
   return true;
 }
