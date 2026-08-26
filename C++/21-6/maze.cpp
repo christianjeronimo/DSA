@@ -27,3 +27,18 @@ Maze::~Maze() {
   delete sets;
 }
 
+int Maze::index(int r, int c) {
+  return 0;
+}
+
+void Maze::remove_wall(int r1, int c1, int r2, int c2) {
+  return;
+}
+
+void Maze::generate() {
+  return;
+}
+
+void Maze::print_maze() {
+  return;
+}
